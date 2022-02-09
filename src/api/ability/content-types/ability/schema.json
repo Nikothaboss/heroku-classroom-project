@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abilities",
+  "info": {
+    "singularName": "ability",
+    "pluralName": "abilities",
+    "displayName": "Ability"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "max_dmg": {
+      "type": "integer"
+    },
+    "min_dmg": {
+      "type": "integer"
+    },
+    "character": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::character.character",
+      "inversedBy": "abilities"
+    }
+  }
+}
