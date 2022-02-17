@@ -15,24 +15,14 @@
     "name": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "added_to_game": {
-      "type": "date"
-    },
     "abilities": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::ability.ability",
       "mappedBy": "character"
+    },
+    "image_url": {
+      "type": "string"
     }
   }
 }

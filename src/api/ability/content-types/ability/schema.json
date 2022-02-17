@@ -4,27 +4,25 @@
   "info": {
     "singularName": "ability",
     "pluralName": "abilities",
-    "displayName": "Ability"
+    "displayName": "Ability",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
-    },
-    "max_dmg": {
-      "type": "integer"
-    },
-    "min_dmg": {
-      "type": "integer"
     },
     "character": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::character.character",
       "inversedBy": "abilities"
+    },
+    "icon_url": {
+      "type": "string"
     }
   }
 }
