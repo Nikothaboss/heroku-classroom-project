@@ -7,7 +7,17 @@ module.exports = (plugin) => {
     const newJwt = strapi.plugins["users-permissions"].services.jwt.issue({
       id: payload.id,
     });
-    return payload;
+
+    const { id, iat, exp } = await payload;
+
+    const query = {
+      id,
+      iat,
+      exp,
+      newJwt,
+    };
+
+    return query;
   };
 
   plugin.routes["content-api"].routes.push({
